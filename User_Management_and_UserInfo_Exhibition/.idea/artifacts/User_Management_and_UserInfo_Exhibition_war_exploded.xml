@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="User_Management_and_UserInfo_Exhibition:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/User_Management_and_UserInfo_Exhibition_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="User_Management_and_UserInfo_Exhibition/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="User_Management_and_UserInfo_Exhibition" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
