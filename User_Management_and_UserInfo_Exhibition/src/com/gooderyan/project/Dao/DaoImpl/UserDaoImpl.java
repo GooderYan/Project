@@ -68,4 +68,20 @@ public class UserDaoImpl implements UserDao {
         return count;
     }
 
+    /*
+    * 删除单个或多个用户
+    * */
+    @Override
+    public int deleteUsers(String[] userid) {
+        StringBuilder sql = new StringBuilder("delete from user where id in (");
+        for (String s : userid) {
+            sql.append(s + ",  ");
+        }
+        //删除最后一个逗号，并补全右括号
+        sql.delete(sql.length() - 3, sql.length());
+        sql.append(")");
+
+        return template.update(sql.toString());
+    }
+
 }

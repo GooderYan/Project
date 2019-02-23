@@ -26,13 +26,45 @@
             text-align: center;
         }
     </style>
+    <script>
+        window.onload = function (ev) {
+            //删除选中功能：
+            document.getElementById("deleteSelected").onclick = function (ev1) {
+                //防止空指针异常，判断是否有被选中
+                var flag = false;
+                //提高用户体验，确认框确认
+                if (confirm("确认删除？")){
+                    //获取所有选择框
+                    var usersId = document.getElementsByClassName("idBox");
+                    for (var i = 0; i < usersId.length; i++) {
+                        if(usersId[i].checked){
+                            //只要有一个状态为checked，便将flag置为true，并结束循环
+                            flag = true;
+                            break;
+                        }
+                    }
+                    //只要是true, 便提交表单
+                    if(flag){
+                        document.getElementById("deleteForm").submit();
+                    }
+                }
+            }
+
+            //删除单个用户
+            document.getElementById("deleteSingle").onclick = function (ev1) {
+                if (confirm("确认删除?")){
+                    this.submit();
+                }
+            }
+        }
+    </script>
 </head>
 <body>
 <div class="container">
     <h3 style="text-align: center">用户信息列表</h3>
     <div style="float: right; margin: 10px">
         <a class="btn btn-primary" href="add.html">添加</a>
-        <a class="btn btn-primary" href="add.html">删除选中</a>
+        <a class="btn btn-primary" href="#" id="deleteSelected">删除选中</a>
     </div>
 
     <form class="form-inline">
@@ -71,12 +103,16 @@
             <th>操作</th>
         </tr>
         <%--循环遍历当前页所要展示的用户数据--%>
+        <form action="${pageContext.servletContext.contextPath}/deleteUserServlet?currentPage=${requestScope.PageBean.currentPage}" method="post"
+              id="deleteForm">
         <c:forEach var="i" items="${requestScope.PageBean.users}" varStatus="s">
         <tr>
             <td>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" value=""> <%--选择框，选中后获取该用户id--%>
+                        <input type="checkbox" value="${requestScope.PageBean.users[s.index].id}" name="userid"
+                               class="idBox">
+                            <%--选择框，选中后获取该用户id--%>
                     </label>
                 </div>
             </td>
@@ -90,9 +126,13 @@
             <td><a class="btn btn-default btn-sm"
                    href="${pageContext.servletContext.contextPath}/echoServlet?userid=${requestScope.PageBean.users[s.index].id}&currentPage=${requestScope.PageBean.currentPage}">修改
             </a>&nbsp;
-                <a class="btn btn-default btn-sm" href="">删除</a></td>
+                <a class="btn btn-default btn-sm"
+                   href="${pageContext.servletContext.contextPath}/deleteUserServlet?userid=${requestScope.PageBean.users[s.index].id}&currentPage=${requestScope.PageBean.currentPage}"
+                   id="deleteSingle">删除
+                </a></td>
         </tr>
         </c:forEach>
+        </form>
     </table>
     <%--
         页码条组件

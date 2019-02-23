@@ -32,4 +32,9 @@ public interface UserDao {
     * 修改用户信息
     * */
     int updateUser(UserBean user, String userid);
+
+    /*
+    * 删除单个或多个用户
+    * */
+    int deleteUsers(String[] userid);
 }

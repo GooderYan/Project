@@ -27,4 +27,10 @@ public interface UserService {
     * 修改用户信息
     * */
     int updateUser(Map<String, String[]> map, String userid);
+
+    /*
+    * 删除单个或多个用户
+    * */
+    int deleteUsers(Map<String, String[]> parameterMap);
+
 }

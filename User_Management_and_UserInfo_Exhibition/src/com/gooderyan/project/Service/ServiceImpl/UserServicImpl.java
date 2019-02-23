@@ -103,5 +103,19 @@ public class UserServicImpl implements UserService {
         return userDao.updateUser(user, userid);
     }
 
+    /*
+    * 删除单个或多个用户
+    * */
+    @Override
+    public int deleteUsers(Map<String, String[]> parameterMap) {
+        String[] userid = parameterMap.get("userid");
+        int count = userDao.deleteUsers(userid);
+        if (count == userid.length){
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
 
 }
