@@ -3,7 +3,7 @@ package com.gooderyan.project.Service;
 import com.gooderyan.project.Domain.PageBean;
 import com.gooderyan.project.Domain.UserBean;
 
-import java.util.List;
+import java.util.Map;
 
 //规定UserService中的方法规范
 public interface UserService {
@@ -17,4 +17,14 @@ public interface UserService {
 
     //获取数据库的总页数
     int getTotalCounts();
+
+    /*
+    * 查找对应id的用户数据
+    * */
+    UserBean searchUser(String userid);
+
+    /*
+    * 修改用户信息
+    * */
+    int updateUser(Map<String, String[]> map, String userid);
 }

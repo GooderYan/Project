@@ -22,4 +22,14 @@ public interface UserDao {
     * 获取本页所要展示的数据
     * */
     List<UserBean> getUsers(int startIndex, int rows);
+
+    /*
+    * 查找数据库内对应id的用户数据
+    * */
+    UserBean searchUser(int id);
+
+    /*
+    * 修改用户信息
+    * */
+    int updateUser(UserBean user, String userid);
 }

@@ -6,10 +6,11 @@ import com.gooderyan.project.Dao.UserDao;
 import com.gooderyan.project.Domain.PageBean;
 import com.gooderyan.project.Domain.UserBean;
 import com.gooderyan.project.Service.UserService;
+import org.apache.commons.beanutils.BeanUtils;
 
-import java.util.ArrayList;
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
-import java.util.Set;
+import java.util.Map;
 
 //实现UserService接口中的方法
 public class UserServicImpl implements UserService {
@@ -62,9 +63,44 @@ public class UserServicImpl implements UserService {
         return pageBean;
     }
 
+    /*
+    * 获取服务器内的数据总数
+    * */
     @Override
     public int getTotalCounts() {
         return userDao.getTotalCounts();
+    }
+
+    /*
+    * 查找对应id的用户数据
+    * */
+    @Override
+    public UserBean searchUser(String userid) {
+        if (userid != null){
+            int id = Integer.valueOf(userid);
+            //调用UserDao中方法进行查询
+            return userDao.searchUser(id);
+        } else {
+            return null;
+        }
+    }
+
+    /*
+    * 修改用户信息
+    * */
+    @Override
+    public int updateUser(Map<String, String[]> map, String userid) {
+        UserBean user = new UserBean();
+        try {
+            //将用户信息封装进UserBean对象
+            BeanUtils.populate(user, map);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+        //将user对象传递给UserDao执行DML语句
+        return userDao.updateUser(user, userid);
     }
 
 

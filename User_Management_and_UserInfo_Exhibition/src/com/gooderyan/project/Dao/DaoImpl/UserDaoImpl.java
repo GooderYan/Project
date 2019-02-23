@@ -46,4 +46,26 @@ public class UserDaoImpl implements UserDao {
         String sql = "select * from user limit ?, ?";
         return template.query(sql, new BeanPropertyRowMapper<>(UserBean.class), startIndex, rows);
     }
+
+    /*
+    * 查找数据库内对应id的用户数据
+    * */
+    @Override
+    public UserBean searchUser(int id) {
+        String sql = "select id, NAME, gender, age, address, tel, email from user where 1 = 1 and id = ?";
+        return template.queryForObject(sql, new BeanPropertyRowMapper<>(UserBean.class), id);
+    }
+
+    /*
+    * 修改用户信息
+    * */
+    @Override
+    public int updateUser(UserBean user, String userid) {
+        String sql = "update user set gender = ?, age = ?, address = ?, tel = ?, email = ? where id = ?";
+        int count = template.update(sql, user.getGender(), user.getAge(), user.getAddress(), user.getTel(),
+                user.getEmail(), Integer.valueOf(userid));
+
+        return count;
+    }
+
 }

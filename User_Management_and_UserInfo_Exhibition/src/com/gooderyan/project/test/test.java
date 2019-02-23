@@ -37,4 +37,14 @@ public class test {
         List<UserBean> users = userDao.getUsers(1, 5);
         System.out.println(users);
     }
+
+    /*
+    * 测试UserDaoImpl.searchUser
+    * */
+    @Test
+    public void testSearchUser(){
+        UserBean userBean = userDao.searchUser(36);
+        System.out.println(userBean);
+    }
+
 }
