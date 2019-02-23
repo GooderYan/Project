@@ -10,7 +10,7 @@ public class UserBean {
     private Integer age; //年龄
     private String address; //地址
     private String tel;//联系电话
-    private String emmai; //邮箱
+    private String email; //邮箱
     private String username; //管理员登录用户名
     private String password; //管理员登录密码
 
@@ -23,7 +23,7 @@ public class UserBean {
                 ", age=" + age +
                 ", address='" + address + '\'' +
                 ", tel='" + tel + '\'' +
-                ", emmai='" + emmai + '\'' +
+                ", email='" + email + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 '}';
@@ -77,12 +77,12 @@ public class UserBean {
         this.tel = tel;
     }
 
-    public String getEmmai() {
-        return emmai;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmmai(String emmai) {
-        this.emmai = emmai;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getUsername() {

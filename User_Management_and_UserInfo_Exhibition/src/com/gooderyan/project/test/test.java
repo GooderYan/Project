@@ -2,8 +2,11 @@ package com.gooderyan.project.test;
 
 import com.gooderyan.project.Dao.DaoImpl.UserDaoImpl;
 import com.gooderyan.project.Dao.UserDao;
+import com.gooderyan.project.Domain.UserBean;
 import com.gooderyan.project.Utils.DruidUtils;
 import org.junit.Test;
+
+import java.util.List;
 
 public class test {
     private UserDao userDao = new UserDaoImpl();
@@ -24,5 +27,14 @@ public class test {
         String password = "123";
         int i = userDao.checkLogin(username, password);
         System.out.println(i);
+    }
+
+    /*
+    * 测试UserDaoImpl.getUsers()
+    * */
+    @Test
+    public void testGetUser(){
+        List<UserBean> users = userDao.getUsers(1, 5);
+        System.out.println(users);
     }
 }
