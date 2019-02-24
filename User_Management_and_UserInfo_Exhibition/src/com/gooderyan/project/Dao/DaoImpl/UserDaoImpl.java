@@ -6,7 +6,10 @@ import com.gooderyan.project.Utils.DruidUtils;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /*
 * 实现UserDao接口方法
@@ -42,9 +45,29 @@ public class UserDaoImpl implements UserDao {
     * 获取本页所要展示的数据
     * */
     @Override
-    public List<UserBean> getUsers(int startIndex, int rows) {
-        String sql = "select * from user limit ?, ?";
-        return template.query(sql, new BeanPropertyRowMapper<>(UserBean.class), startIndex, rows);
+    public List<UserBean> getUsers(int startIndex, int rows, Map<String, String[]> map) {
+        //1. 生成sql语句模板
+        StringBuilder sql = new StringBuilder("select id, NAME, gender, age, address, tel, email from user where 1 = " +
+            "1 ");
+        //2. 生成List集合，存储输入数据
+        //泛型使用Object, 因为limit分页语句的条件值要求为int, 但其他的条件值都为String。
+        List<Object> list = new ArrayList<>();
+        //3. 遍历Map获取请求消息参数
+        Set<String> keys = map.keySet();
+        for (String key : keys) {
+            //排除掉当前页，获取其他输入数据
+            if (!key.equals("currentPage") && map.get(key)[0].length() > 0){
+                sql.append(" and " + key + " like ?");
+                list.add("%" + map.get(key)[0] + "%");
+            }
+        }
+        //3. 完成sql拼接
+        sql.append(" limit ?, ?");
+        list.add(startIndex);
+        list.add(rows);
+        //4. 执行DQL语句，返回查询结果
+        //注意：为查询语句传参时，需要将集合转换为数组
+        return template.query(sql.toString(), new BeanPropertyRowMapper<>(UserBean.class), list.toArray());
     }
 
     /*
@@ -94,5 +117,4 @@ public class UserDaoImpl implements UserDao {
         return template.update(sql, user.getId(), user.getName(), user.getGender(), user.getAge(), user.getAddress(),
             user.getTel(), user.getEmail(), user.getUsername(), user.getPassword());
     }
-
 }

@@ -3,6 +3,7 @@ package com.gooderyan.project.Dao;
 import com.gooderyan.project.Domain.UserBean;
 
 import java.util.List;
+import java.util.Map;
 
 /*
 * 提供对数据库执行DML, DQL的方法规范
@@ -21,7 +22,7 @@ public interface UserDao {
     /*
     * 获取本页所要展示的数据
     * */
-    List<UserBean> getUsers(int startIndex, int rows);
+    List<UserBean> getUsers(int startIndex, int rows, Map<String, String[]> map);
 
     /*
     * 查找数据库内对应id的用户数据
@@ -42,4 +43,9 @@ public interface UserDao {
     * 添加用户
     * */
     int addUser(UserBean user);
+
+    /*
+    * 用户条件查询方法
+    * */
+//    List<UserBean> searchUser(int index, int rows, Map<String, String[]> map);
 }

@@ -13,7 +13,7 @@ public interface UserService {
     int checkLogin(String username, String passoword);
 
     //获取本业所展示的用户数据
-    PageBean<UserBean> show(String currentPage);
+    PageBean<UserBean> show(Map<String, String[]> map, String _currenPage);
 
     //获取数据库的总页数
     int getTotalCounts();
@@ -42,4 +42,9 @@ public interface UserService {
     * 获取数据库的总页数
     * */
     int getTotalPages(PageBean<UserBean> pageBean );
+
+    /*
+    * show方法重载，用于分页查询和条件查询
+    * */
+//    PageBean<UserBean> show(Map<String, String[]> map, String _currentPage);
 }

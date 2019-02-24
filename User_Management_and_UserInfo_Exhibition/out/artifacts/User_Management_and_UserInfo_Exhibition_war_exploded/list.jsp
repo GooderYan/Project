@@ -67,19 +67,27 @@
         <a class="btn btn-primary" href="#" id="deleteSelected">删除选中</a>
     </div>
 
-    <form class="form-inline">
+    <%--
+        分页条件查询：
+        分页的关键在于导航条组件上的每一个按钮绑定添加到请求域中，从输入框获取的用户输入的查询条件
+    --%>
+    <form class="form-inline" action="${pageContext.servletContext.contextPath}/listServlet">
         <div class="form-group">
             <label for="exampleInputName2">姓名</label>
-            <input type="text" class="form-control" id="exampleInputName2" placeholder="请输入查找姓名" name="name">
+            <input type="text" class="form-control" id="exampleInputName2" value="${requestScope.user.name[0]}"
+                   placeholder="请输入查找姓名"
+                   name="name">
         </div>
         <div class="form-group">
             <label for="exampleInputEmail2">地址</label>
-            <input type="text" class="form-control" id="exampleInputEmail2" placeholder="请输入查找地址"
+            <input type="text" class="form-control" id="exampleInputEmail2" value="${requestScope.user.address[0]}"
+                   placeholder="请输入查找地址"
                    name="address">
         </div>
         <div class="form-group">
             <label for="exampleInputEmail2">电话</label>
-            <input type="text" class="form-control" id="exampleInputEmail3" placeholder="请输入查找电话"
+            <input type="text" class="form-control" id="exampleInputEmail3" value="${requestScope.user.tel[0]}"
+                   placeholder="请输入查找电话"
                    name="tel">
         </div>
         <button type="submit" class="btn btn-default">查找</button>
@@ -147,7 +155,9 @@
                 <li>
             </c:if>
                 <%--点击跳转上一页--%>
-                <a href="${pageContext.servletContext.contextPath}/listServlet?currentPage=${requestScope.PageBean.currentPage - 1}" aria-label="Previous">
+                <a href="${pageContext.servletContext.contextPath}/listServlet?currentPage=${requestScope.PageBean.currentPage - 1}&
+                        name=${requestScope.user.name[0]}&tel=${requestScope.user.tel[0]}&address
+                        =${requestScope.user.address[0]}" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
@@ -161,12 +171,17 @@
                 <li>
             </c:if>
                 <%--显示页数--%>
-                    <a href="${pageContext.servletContext.contextPath}/listServlet?currentPage=${i}">${i}</a>
+                    <a
+                        href="${pageContext.servletContext.contextPath}/listServlet?currentPage=${i}&
+                        name=${requestScope.user.name[0]}&tel=${requestScope.user.tel[0]}&address
+                        =${requestScope.user.address[0]}">${i}</a>
                 </c:forEach>
             </li>
             <li>
                 <%--点击跳转下一页--%>
-                <a href="${pageContext.servletContext.contextPath}/listServlet?currentPage=${requestScope.PageBean.currentPage + 1}" aria-label="Next">
+                <a href="${pageContext.servletContext.contextPath}/listServlet?currentPage=${requestScope.PageBean.currentPage + 1}&
+                        name=${requestScope.user.name[0]}&tel=${requestScope.user.tel[0]}&address
+                        =${requestScope.user.address[0]}" aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
                 </a>
             </li>

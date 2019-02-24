@@ -6,7 +6,9 @@ import com.gooderyan.project.Domain.UserBean;
 import com.gooderyan.project.Utils.DruidUtils;
 import org.junit.Test;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class test {
     private UserDao userDao = new UserDaoImpl();
@@ -34,7 +36,9 @@ public class test {
     * */
     @Test
     public void testGetUser(){
-        List<UserBean> users = userDao.getUsers(1, 5);
+        Map<String, String[]> map = new HashMap<>();
+        map.put("name", new String[]{"李"});
+        List<UserBean> users = userDao.getUsers(1, 5, map);
         System.out.println(users);
     }
 

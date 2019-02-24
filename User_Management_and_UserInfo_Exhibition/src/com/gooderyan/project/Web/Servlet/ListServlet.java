@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.List;
+import java.util.Map;
 
 /*
 * 用户信息列表分页展示：
@@ -21,24 +21,39 @@ import java.util.List;
 @WebServlet("/listServlet")//默认路径
 public class ListServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //1. 修改请求消息字符集, 为实现条件查询，获取请求体参数
+        req.setCharacterEncoding("utf-8");
+        UserService service = new UserServicImpl();
+        //2. 先从session中获取当前页码
         HttpSession session = req.getSession();
-        String currentPage = (String) session.getAttribute("currentPage"); //获取当前页码
+        String currentPage = (String) session.getAttribute("currentPage");
+
+        //2-1.获取用户提交参数，为实现条件分页查询。
+        /*
+        * 因为分页查询的当前页是从list.jsp页面中的导航条中获取，条件查询按钮第一次查询无法从请求域中获取当前页。尝试：将第一次查询当前页置为1
+        * 注：分页查询的当前页码不能封装在session域中，只能封装在请求域中
+        * */
+        Map<String, String[]> map = req.getParameterMap();
+        //3. 创建空的PageBean对象
+        PageBean<UserBean> pageBean = new PageBean<>();
         //若session中没有currentPage属性，则从request域中获取
-        if (currentPage == null){
+        if (currentPage != null){
             /*
-            * 若为null，则不是updateServlet转发过来
-            * */
-            currentPage = req.getParameter("currentPage");
-        } else {
-            /*
-            * 若为null，则为updateServlet转发过来。
+            * 若不为null，则请求消息为updateServlet转发过来。
             * 获取完之后应立刻删除该属性，否则页面将会被锁定
             * */
             session.removeAttribute("currentPage");
+            pageBean = service.show(map, currentPage);
+        } else {
+            /*
+             * 若session中没有currentPage属性，则请求消息不是从updateServelt转发
+             * 执行查询方法
+             * */
+            currentPage = req.getParameter("currentPage");
+            pageBean = service.show(map, currentPage);
+            req.setAttribute("user", map);
         }
 
-        UserService service = new UserServicImpl();
-        PageBean<UserBean> pageBean = service.show(currentPage);
         //将获取到PageBean对象返回至list页码展示
         req.setAttribute("PageBean", pageBean);
         req.getRequestDispatcher("/list.jsp").forward(req, resp);
