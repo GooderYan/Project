@@ -66,6 +66,8 @@
 					request.removeAttribute("Error");
 				%>
 			</c:if>
+        <c:if test="${empty requestScope.Error}">
+        </c:if>
   	</div>
   </body>
 </html>
