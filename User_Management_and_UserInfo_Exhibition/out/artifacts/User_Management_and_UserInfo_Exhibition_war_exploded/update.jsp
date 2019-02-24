@@ -13,7 +13,6 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <script src="js/jquery-2.1.0.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        
     </head>
     <body>
         <div class="container" style="width: 400px;">
@@ -218,7 +217,9 @@
              <div class="form-group" style="text-align: center">
                 <input class="btn btn-primary" type="submit" value="提交" />
                 <input class="btn btn-default" type="reset" value="重置" />
-                <input class="btn btn-default" type="button" value="返回"/>
+                 <a id="back" href="${pageContext.servletContext.contextPath}/listServlet?currentPage
+                 =${requestScope.PageBean.currentPage}">
+                <input class="btn btn-default" type="button" value="返回"/></a>
              </div>
         </form>
         </div>

@@ -84,4 +84,15 @@ public class UserDaoImpl implements UserDao {
         return template.update(sql.toString());
     }
 
+    /*
+    * 添加用户
+    * */
+    @Override
+    public int addUser(UserBean user) {
+        //手动添加null值，不能作为字符串添加
+        String sql = "insert into user values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        return template.update(sql, user.getId(), user.getName(), user.getGender(), user.getAge(), user.getAddress(),
+            user.getTel(), user.getEmail(), user.getUsername(), user.getPassword());
+    }
+
 }

@@ -63,7 +63,7 @@
 <div class="container">
     <h3 style="text-align: center">用户信息列表</h3>
     <div style="float: right; margin: 10px">
-        <a class="btn btn-primary" href="add.html">添加</a>
+        <a class="btn btn-primary" href="${pageContext.servletContext.contextPath}/add.jsp">添加</a>
         <a class="btn btn-primary" href="#" id="deleteSelected">删除选中</a>
     </div>
 

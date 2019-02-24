@@ -33,4 +33,13 @@ public interface UserService {
     * */
     int deleteUsers(Map<String, String[]> parameterMap);
 
+    /*
+    * 添加用户
+    * */
+    int addUser(UserBean user);
+
+    /*
+    * 获取数据库的总页数
+    * */
+    int getTotalPages(PageBean<UserBean> pageBean );
 }

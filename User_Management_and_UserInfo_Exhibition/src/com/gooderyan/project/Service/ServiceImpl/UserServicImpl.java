@@ -34,7 +34,7 @@ public class UserServicImpl implements UserService {
         //获取总的数据数
         int totalCounts = getTotalCounts();
         //获取总页码数
-        int totalPages = (totalCounts % pageBean.getROWS()) == 0 ? (totalCounts / pageBean.getROWS()) : (totalCounts / pageBean.getROWS() + 1);
+        int totalPages = getTotalPages(pageBean);
         int currentPage;
         if (_currentPage == null){
             currentPage = 1;
@@ -61,6 +61,14 @@ public class UserServicImpl implements UserService {
         pageBean.setUsers(list);
         pageBean.setCurrentPage(currentPage);
         return pageBean;
+    }
+
+    /*
+    * 获取数据数据总页数
+    * */
+    public int getTotalPages(PageBean<UserBean> pageBean ) {
+        int totalCounts = getTotalCounts();
+        return (totalCounts % pageBean.getROWS()) == 0 ? (totalCounts / pageBean.getROWS()) : (totalCounts / pageBean.getROWS() + 1);
     }
 
     /*
@@ -115,6 +123,14 @@ public class UserServicImpl implements UserService {
         } else {
             return 0;
         }
+    }
+
+    /*
+    * 添加用户
+    * */
+    @Override
+    public int addUser(UserBean user) {
+        return userDao.addUser(user);
     }
 
 

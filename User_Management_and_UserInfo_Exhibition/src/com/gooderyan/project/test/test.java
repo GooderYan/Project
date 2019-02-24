@@ -47,4 +47,17 @@ public class test {
         System.out.println(userBean);
     }
 
+    /*
+    * 测试UserDaoImpl.addUser
+    * */
+    @Test
+    public void testaddUser(){
+        UserBean userBean = new UserBean();
+        userBean.setName("山驴逼");
+        userBean.setAge(18);
+        userBean.setAddress("asdfadsfa");
+        userBean.setTel("176324");
+        userDao.addUser(userBean);
+    }
+
 }

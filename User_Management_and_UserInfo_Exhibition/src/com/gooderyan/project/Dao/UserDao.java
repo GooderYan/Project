@@ -37,4 +37,9 @@ public interface UserDao {
     * 删除单个或多个用户
     * */
     int deleteUsers(String[] userid);
+
+    /*
+    * 添加用户
+    * */
+    int addUser(UserBean user);
 }

@@ -6,22 +6,27 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9b8ac6f-f52b-4695-ba18-4f6cf5f155c7" name="Default Changelist" comment="修改功能完成">
+    <list default="true" id="f9b8ac6f-f52b-4695-ba18-4f6cf5f155c7" name="Default Changelist" comment="单选与多选功能完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/User_Management_and_UserInfo_Exhibition_war_exploded/WEB-INF/classes/com/gooderyan/project/Dao/DaoImpl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/User_Management_and_UserInfo_Exhibition_war_exploded/WEB-INF/classes/com/gooderyan/project/Dao/DaoImpl/UserDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/User_Management_and_UserInfo_Exhibition_war_exploded/WEB-INF/classes/com/gooderyan/project/Dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/User_Management_and_UserInfo_Exhibition_war_exploded/WEB-INF/classes/com/gooderyan/project/Dao/UserDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/User_Management_and_UserInfo_Exhibition_war_exploded/WEB-INF/classes/com/gooderyan/project/Service/ServiceImpl/UserServicImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/User_Management_and_UserInfo_Exhibition_war_exploded/WEB-INF/classes/com/gooderyan/project/Service/ServiceImpl/UserServicImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/User_Management_and_UserInfo_Exhibition_war_exploded/WEB-INF/classes/com/gooderyan/project/Service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/User_Management_and_UserInfo_Exhibition_war_exploded/WEB-INF/classes/com/gooderyan/project/Service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/User_Management_and_UserInfo_Exhibition_war_exploded/add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/User_Management_and_UserInfo_Exhibition_war_exploded/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/User_Management_and_UserInfo_Exhibition_war_exploded/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/User_Management_and_UserInfo_Exhibition_war_exploded/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/User_Management_and_UserInfo_Exhibition_war_exploded/update.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/User_Management_and_UserInfo_Exhibition/com/gooderyan/project/Dao/DaoImpl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/User_Management_and_UserInfo_Exhibition/com/gooderyan/project/Dao/DaoImpl/UserDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/User_Management_and_UserInfo_Exhibition/com/gooderyan/project/Dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/User_Management_and_UserInfo_Exhibition/com/gooderyan/project/Dao/UserDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/User_Management_and_UserInfo_Exhibition/com/gooderyan/project/Service/ServiceImpl/UserServicImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/User_Management_and_UserInfo_Exhibition/com/gooderyan/project/Service/ServiceImpl/UserServicImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/User_Management_and_UserInfo_Exhibition/com/gooderyan/project/Service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/User_Management_and_UserInfo_Exhibition/com/gooderyan/project/Service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/User_Management_and_UserInfo_Exhibition/com/gooderyan/project/test/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/User_Management_and_UserInfo_Exhibition/com/gooderyan/project/test/test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gooderyan/project/Dao/DaoImpl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gooderyan/project/Dao/DaoImpl/UserDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gooderyan/project/Dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gooderyan/project/Dao/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gooderyan/project/Service/ServiceImpl/UserServicImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gooderyan/project/Service/ServiceImpl/UserServicImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/gooderyan/project/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gooderyan/project/Service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/gooderyan/project/test/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/gooderyan/project/test/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/add.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/update.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,10 +42,19 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Web/Servlet/UpdateServlet.java">
+        <entry file="file://$PROJECT_DIR$/web/add.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+            <state relative-caret-position="270">
+              <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Web/Servlet/AddUserServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="581">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
             </state>
           </provider>
         </entry>
@@ -48,47 +62,40 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Web/Servlet/ListServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="36" column="3" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
+            <state relative-caret-position="300">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Web/Servlet/IdentifyCodeServlet.java">
+        <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
+            <state relative-caret-position="531">
+              <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/list.jsp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Service/ServiceImpl/UserServicImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="129" column="181" selection-start-line="129" selection-start-column="181" selection-end-line="129" selection-end-column="181" />
+            <state>
+              <caret line="66" column="15" selection-start-line="66" selection-start-column="15" selection-end-line="66" selection-end-column="15" />
               <folding>
-                <element signature="e#5066#5072#0#HTML" expanded="true" />
+                <element signature="method#show#0;class#UserServicImpl#0" />
+                <element signature="e#3233#3234#0" expanded="true" />
+                <element signature="e#3276#3277#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Web/Servlet/DeleteUserServlet.java">
+        <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Dao/DaoImpl/UserDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="507">
+              <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,19 +104,47 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Service/UserService.java">
+        <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Dao/DaoImpl/UserDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="33" column="55" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+            <state relative-caret-position="388">
+              <caret line="91" column="29" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Service/ServiceImpl/UserServicImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/test/test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="113" column="21" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
+            <state relative-caret-position="360">
+              <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/list.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="59" column="13" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/update.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="219" column="17" selection-start-line="219" selection-start-column="17" selection-end-line="220" selection-end-column="56" />
+              <folding>
+                <element signature="n#select#0;n#div#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#c:if#12;n#jsp:root#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -158,14 +193,16 @@
         <option value="$PROJECT_DIR$/src/com/gooderyan/project/Web/Servlet/EchoServlet.java" />
         <option value="$PROJECT_DIR$/src/com/gooderyan/project/Web/Servlet/UpdateServlet.java" />
         <option value="$PROJECT_DIR$/src/com/gooderyan/project/Web/Servlet/ListServlet.java" />
+        <option value="$PROJECT_DIR$/src/com/gooderyan/project/Web/Servlet/DeleteUserServlet.java" />
         <option value="$PROJECT_DIR$/web/update.jsp" />
+        <option value="$PROJECT_DIR$/web/list.jsp" />
         <option value="$PROJECT_DIR$/src/com/gooderyan/project/Dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/com/gooderyan/project/Service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/com/gooderyan/project/Dao/DaoImpl/UserDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/gooderyan/project/test/test.java" />
         <option value="$PROJECT_DIR$/src/com/gooderyan/project/Service/ServiceImpl/UserServicImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/gooderyan/project/Web/Servlet/DeleteUserServlet.java" />
-        <option value="$PROJECT_DIR$/web/list.jsp" />
+        <option value="$PROJECT_DIR$/web/add.jsp" />
+        <option value="$PROJECT_DIR$/src/com/gooderyan/project/test/test.java" />
+        <option value="$PROJECT_DIR$/src/com/gooderyan/project/Dao/DaoImpl/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/gooderyan/project/Web/Servlet/AddUserServlet.java" />
       </list>
     </option>
   </component>
@@ -179,7 +216,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-5" />
     <option name="y" value="23" />
-    <option name="width" value="922" />
+    <option name="width" value="1572" />
     <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -327,7 +364,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550963210526" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550966340211" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -356,22 +393,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.38">
-    <configuration name="test.dsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="User_Management_and_UserInfo_Exhibition" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.gooderyan.project.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.gooderyan.project.test" />
-      <option name="MAIN_CLASS_NAME" value="com.gooderyan.project.test.test" />
-      <option name="METHOD_NAME" value="dsTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="test.loginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="User_Management_and_UserInfo_Exhibition" />
       <extension name="coverage">
@@ -415,6 +436,22 @@
       <option name="PACKAGE_NAME" value="com.gooderyan.project.test" />
       <option name="MAIN_CLASS_NAME" value="com.gooderyan.project.test.test" />
       <option name="METHOD_NAME" value="testSearchUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test.testaddUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="User_Management_and_UserInfo_Exhibition" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gooderyan.project.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gooderyan.project.test" />
+      <option name="MAIN_CLASS_NAME" value="com.gooderyan.project.test.test" />
+      <option name="METHOD_NAME" value="testaddUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -513,20 +550,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.test.dsTest" />
       <item itemvalue="JUnit.test.loginTest" />
       <item itemvalue="JUnit.test.testGetUser" />
       <item itemvalue="JUnit.test.testSearchUser" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.38" />
       <item itemvalue="JUnit.test.testdeleteUsers" />
+      <item itemvalue="JUnit.test.testaddUser" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.test.testaddUser" />
         <item itemvalue="JUnit.test.testdeleteUsers" />
         <item itemvalue="JUnit.test.testSearchUser" />
         <item itemvalue="JUnit.test.testGetUser" />
         <item itemvalue="JUnit.test.loginTest" />
-        <item itemvalue="JUnit.test.dsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -540,7 +577,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550867761124</updated>
-      <workItem from="1550867763292" duration="43658000" />
+      <workItem from="1550867763292" duration="46726000" />
     </task>
     <task id="LOCAL-00001" summary="初步搭建完成，功能未实现">
       <created>1550873463374</created>
@@ -584,25 +621,24 @@
       <option name="project" value="LOCAL" />
       <updated>1550952785613</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="单选与多选功能完成">
+      <created>1550963208053</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1550963208055</updated>
+    </task>
+    <task id="LOCAL-00008" summary="单选与多选功能完成">
+      <created>1550963218421</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1550963218421</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test_testSearchUser - 2019.02.24 at 02h 17m 57s.xml">
-      <configuration name="test.testSearchUser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_testSearchUser - 2019.02.24 at 02h 18m 41s.xml">
-      <configuration name="test.testSearchUser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_testSearchUser - 2019.02.24 at 02h 19m 17s.xml">
-      <configuration name="test.testSearchUser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_testSearchUser - 2019.02.24 at 02h 19m 38s.xml">
-      <configuration name="test.testSearchUser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_testSearchUser - 2019.02.24 at 02h 21m 51s.xml">
-      <configuration name="test.testSearchUser" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="test_testSearchUser - 2019.02.24 at 02h 22m 41s.xml">
       <configuration name="test.testSearchUser" configurationId="JUnit" />
     </history-entry>
@@ -618,20 +654,36 @@
     <history-entry file="test_testdeleteUsers - 2019.02.24 at 06h 41m 30s.xml">
       <configuration name="test.testdeleteUsers" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="test_testaddUser - 2019.02.24 at 07h 47m 05s.xml">
+      <configuration name="test.testaddUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_testaddUser - 2019.02.24 at 07h 47m 34s.xml">
+      <configuration name="test.testaddUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_testaddUser - 2019.02.24 at 07h 51m 36s.xml">
+      <configuration name="test.testaddUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_testaddUser - 2019.02.24 at 07h 51m 47s.xml">
+      <configuration name="test.testaddUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_testaddUser - 2019.02.24 at 07h 52m 17s.xml">
+      <configuration name="test.testaddUser" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43658000" />
+    <option name="totallyTimeSpent" value="46726000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="23" width="961" height="1027" extended-state="0" />
+    <frame x="-5" y="23" width="1572" height="1027" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Capture Tool" />
-      <window_info id="Web" sideWeight="0.5005348" side_tool="true" weight="0.16507703" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49946523" visible="true" weight="0.20457019" />
+      <window_info id="Web" sideWeight="0.5006519" side_tool="true" weight="0.21282528" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4993481" weight="0.21148326" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Application Servers" />
       <window_info anchor="bottom" id="Spring" />
@@ -644,8 +696,8 @@
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.23529412" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.36363637" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36256686" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.22352941" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -668,7 +720,8 @@
     <MESSAGE value="登录功能完成" />
     <MESSAGE value="分页展示功能完成" />
     <MESSAGE value="修改功能完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改功能完成" />
+    <MESSAGE value="单选与多选功能完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="单选与多选功能完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -681,7 +734,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/com/gooderyan/project/Service/ServiceImpl/UserServicImpl.java</url>
-          <line>102</line>
+          <line>110</line>
           <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
@@ -718,13 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-950">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -842,16 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/update.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="54" column="3" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
-          <folding>
-            <element signature="n#c:if#12;n#jsp:root#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Web/Servlet/EchoServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -880,27 +916,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Web/Servlet/DeleteUserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="36" column="2" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" selection-start-line="14" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/update.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="219" column="17" selection-start-line="219" selection-start-column="17" selection-end-line="220" selection-end-column="56" />
+          <folding>
+            <element signature="n#select#0;n#div#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#c:if#12;n#jsp:root#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="59" column="13" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+        <state relative-caret-position="507">
+          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Web/Servlet/ListServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Service/ServiceImpl/UserServicImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="36" column="3" selection-start-line="36" selection-start-column="3" selection-end-line="36" selection-end-column="3" />
+        <state>
+          <caret line="66" column="15" selection-start-line="66" selection-start-column="15" selection-end-line="66" selection-end-column="15" />
+          <folding>
+            <element signature="method#show#0;class#UserServicImpl#0" />
+            <element signature="e#3233#3234#0" expanded="true" />
+            <element signature="e#3276#3277#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/test/test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+        <state relative-caret-position="360">
+          <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Dao/DaoImpl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="91" column="29" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -909,42 +999,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="33" column="55" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+        <state relative-caret-position="531">
+          <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Service/ServiceImpl/UserServicImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Web/Servlet/ListServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="113" column="21" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
+        <state relative-caret-position="300">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Web/Servlet/DeleteUserServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Web/Servlet/AddUserServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gooderyan/project/Dao/DaoImpl/UserDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="129" column="181" selection-start-line="129" selection-start-column="181" selection-end-line="129" selection-end-column="181" />
-          <folding>
-            <element signature="e#5066#5072#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="581">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>
